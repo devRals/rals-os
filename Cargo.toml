@@ -1,0 +1,16 @@
+[package]
+name = "rals-os"
+version = "0.1.0"
+authors = ["devRals"]
+edition = "2024"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[[bin]]
+name = "rals-os"
+test = false
+bench = false
