@@ -20,8 +20,8 @@
         pkgs = import nixpkgs {inherit system overlays;};
         rust-toolchain = pkgs.rust-bin.selectLatestNightlyWith (toolchain:
           toolchain.default.override {
-            extensions = ["rust-src"];
-            targets = ["aarch64-unknown-none"];
+            extensions = ["rust-src" "llvm-tools-preview"];
+            targets = ["aarch64-unknown-none" "x86_64-unknown-none"];
           });
       in {
         packages = {};
